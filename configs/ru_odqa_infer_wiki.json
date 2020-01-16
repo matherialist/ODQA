@@ -4,7 +4,7 @@
       "question_raw"
     ],
     "out": [
-      "best_answer", "best_answer_score"
+      "best_answer"
     ],
     "pipe": [
       {
@@ -33,8 +33,7 @@
         "in": ["tfidf_doc_text"],
         "out": ["chunks"],
         "flatten_result": true,
-        "paragraphs": true,
-        "tokens_limit": 100000
+        "paragraphs": true
       },
       {
         "class_name": "string_multiplier",
@@ -43,8 +42,8 @@
       },
       {
         "class_name": "logit_ranker",
-        "batch_size": 10000,
-        "squad_model": {"config_path": "{CONFIGS_PATH}/multi_squad_ru_retr_noans_rubert_infer.json"},
+        "batch_size": 10,
+        "squad_model": {"config_path": "{CONFIGS_PATH}/squad/squad_ru.json"},
         "sort_noans": true,
         "in": [
           "chunks",
@@ -62,11 +61,10 @@
       "ROOT_PATH": "~/.deeppavlov",
       "DOWNLOADS_PATH": "{ROOT_PATH}/downloads",
       "MODELS_PATH": "{ROOT_PATH}/models",
-      "CONFIGS_PATH": "configs"
+      "CONFIGS_PATH": "{DEEPPAVLOV_PATH}/configs"
     },
     "requirements": [
-      "{DEEPPAVLOV_PATH}/requirements/tf.txt",
-      "{DEEPPAVLOV_PATH}/requirements/bert_dp.txt"
+      "{DEEPPAVLOV_PATH}/requirements/tf.txt"
     ],
     "download": [
     ]

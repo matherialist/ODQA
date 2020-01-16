@@ -4,9 +4,9 @@ from deeppavlov.core.commands.infer import build_model
 from deeppavlov.utils.telegram import interact_model_by_telegram
 
 
-model_config = read_json("C:/Users/Lagrange/Desktop/ODQA/configs/ru_ranker_tfidf_wiki.json")
+model_config = read_json("configs/ru_ranker_tfidf_wiki.json")
 #model_config = read_json(configs.doc_retrieval.en_ranker_tfidf_wiki)
-#model_config["dataset_reader"]["data_path"] = "train_data"
+#model_config["dataset_reader"]["data_path"] = "~/Desktop/ODQA/train_data"
 #model_config["dataset_reader"]["dataset_format"] = "txt"
 
 ranker = train_model(model_config)
