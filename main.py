@@ -19,4 +19,4 @@ answers = odqa(["what is tuberculosis?", "how should I take antibiotics?"])
 
 print(answers)
 
-#interact_model_by_telegram(model_config=configs.odqa.en_odqa_infer_wiki, token='998116369:AAGrvjdugSsYOklXcQ4yZxWWpyisLiAZtVE')
+#interact_model_by_telegram(model_config=configs.odqa.en_odqa_infer_wiki, token='')
