@@ -69,16 +69,6 @@
     "requirements": [],
     "labels": {
       "server_utils": "Ranker"
-    },
-    "download": [
-      {
-        "url": "http://files.deeppavlov.ai/datasets/wikipedia/ruwiki.tar.gz",
-        "subdir": "{DOWNLOADS_PATH}"
-      },
-      {
-        "url": "http://files.deeppavlov.ai/deeppavlov_data/ru_odqa.tar.gz",
-        "subdir": "{MODELS_PATH}"
-      }
-    ]
+    }
   }
 }
